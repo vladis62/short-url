@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: short-url
+  liquibase:
+    url: ${datasource.jdbc-url}
+    user: ${datasource.username}
+    password: ${datasource.password}
+    change-log: classpath:db/changelog-master.yaml
+    default-schema: ${datasource.schema}
+    enabled: true
+
+server:
+  servlet:
+    context-path: /${spring.application.name}
+  port: 8080
+
+datasource:
+  jdbc-url: jdbc:postgresql://localhost:5432/short_url
+  username: vlad_os
+  schema: short_url
+  password: 123
+  max-pool-size: 10
+  min-idle: 3
+  idle-timeout: 20000

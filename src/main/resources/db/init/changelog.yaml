@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: version_0.1
+      author: vlad_os
+      changes:
+        - tagDatabase:
+            tag: 0.1
+
+  - changeSet:
+      id: urls
+      author: vlad_os
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            endDelimiter: ;
+            path: sql/urls.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+      rollback:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            endDelimiter: ;
+            path: rollback/rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
