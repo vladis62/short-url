@@ -4,6 +4,6 @@ import java.sql.Timestamp
 
 data class UrlEntity(
     val hash: String,
-    val originalPath: String,
+    val originalUrl: String,
     val expiration: Timestamp? = null
 )

@@ -2,7 +2,7 @@ create table if not exists urls
 (
     id             bigserial  primary key,
     hash           varchar(7) not null,
-    original_path  text       not null,
+    original_url  text       not null,
     expiration     timestamp,
     create_date    timestamp default current_timestamp not null
 );

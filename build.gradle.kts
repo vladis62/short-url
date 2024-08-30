@@ -28,6 +28,7 @@ dependencies {
 	implementation(group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version = "2.1.0")
 	implementation(group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-api", version = "2.1.0")
 	implementation("io.swagger.core.v3:swagger-annotations:2.2.22")
+	implementation(group = "io.github.microutils", name = "kotlin-logging", version = "2.1.23")
 //	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
