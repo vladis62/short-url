@@ -2,7 +2,6 @@ package ru.vlados.shorturl.service
 
 import org.springframework.context.ApplicationContext
 import org.springframework.stereotype.Service
-import ru.vlados.shorturl.controller.PROXY_PATH
 import ru.vlados.shorturl.model.OriginalUrlResponse
 import ru.vlados.shorturl.model.ShortUrlResponse
 import ru.vlados.shorturl.repository.UrlsRepository
@@ -37,5 +36,5 @@ class UrlServiceImpl(
 
 
     private fun buildShortUrl(hash: String) =
-        ShortUrlResponse("http://localhost:8080${applicationContext.applicationName}/$PROXY_PATH/$hash")
+        ShortUrlResponse("http://localhost:8080${applicationContext.applicationName}/$hash")
 }

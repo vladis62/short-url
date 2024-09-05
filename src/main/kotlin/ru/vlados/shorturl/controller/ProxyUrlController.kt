@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RestController
 import ru.vlados.shorturl.service.UrlService
 import java.net.URI
 
-const val PROXY_PATH = "proxy"
 
 @RestController
-@RequestMapping(PROXY_PATH)
+@RequestMapping
 class ProxyUrlController(
     private val urlService: UrlService
 ): ProxyUrlApi {

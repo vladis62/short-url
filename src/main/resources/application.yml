@@ -1,6 +1,6 @@
 spring:
   application:
-    name: short-url
+    name: su
   liquibase:
     url: ${datasource.jdbc-url}
     user: ${datasource.username}

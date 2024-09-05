@@ -4,4 +4,4 @@
 * Запустить docker desktop
 * Запустить compose.yaml
 * Запустить проект
-* В проекте есть сваггер с доступным [api](http://localhost:8080/short-url/swagger-ui/index.html)
+* В проекте есть сваггер с доступным [api](http://localhost:8080/su/swagger-ui/index.html)
