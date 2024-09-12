@@ -1,7 +1,6 @@
 package ru.vlados.shorturl.repository
 
 import mu.KotlinLogging
-import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.stereotype.Service
@@ -31,7 +30,6 @@ private val log = KotlinLogging.logger {}
 
 @Service
 class UrlsRepositoryImpl(
-    @Qualifier("shortUrlTemplate")
     private val jdbcTemplate: NamedParameterJdbcTemplate,
     private val urlsRowMapper: UrlsRowMapper,
 ) : UrlsRepository {

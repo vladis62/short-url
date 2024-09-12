@@ -11,7 +11,7 @@ databaseChangeLog:
       author: vlad_os
       changes:
         - sqlFile:
-            dbms: postgresql
+            dbms: h2
             encoding: utf8
             endDelimiter: ;
             path: sql/urls.sql
@@ -20,7 +20,7 @@ databaseChangeLog:
             stripComments: true
       rollback:
         - sqlFile:
-            dbms: postgresql
+            dbms: h2
             encoding: utf8
             endDelimiter: ;
             path: rollback/rollback.sql

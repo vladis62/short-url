@@ -1,10 +1,8 @@
-create table if not exists urls
+CREATE TABLE IF NOT EXISTS urls
 (
-    id             bigserial  primary key,
-    hash           varchar(7) not null,
-    original_url  text       not null,
-    expiration     timestamp,
-    create_date    timestamp default current_timestamp not null
+    id             BIGSERIAL  PRIMARY KEY,
+    hash           VARCHAR(7) NOT NULL,
+    original_url   TEXT       NOT NULL,
+    expiration     TIMESTAMP,
+    create_date    TIMESTAMP  DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
-
-grant select, insert, update on table urls to vlad_os;

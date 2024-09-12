@@ -9,7 +9,7 @@ plugins {
 
 group = "ru.vlados"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_19
+java.sourceCompatibility = JavaVersion.VERSION_22
 
 repositories {
 	mavenCentral()
@@ -18,13 +18,12 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 //	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	runtimeOnly("com.h2database:h2:2.2.224")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.liquibase:liquibase-core")
-	// swagger
-//	implementation(rootProject.libs.swagger.annotations)
 	implementation(group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version = "2.1.0")
 	implementation(group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-api", version = "2.1.0")
 	implementation("io.swagger.core.v3:swagger-annotations:2.2.22")
